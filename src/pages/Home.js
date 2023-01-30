@@ -12,6 +12,7 @@ import {
   Checkbox,
   Button,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 function Home() {
   const [posts, setPosts] = useState(null);
   useEffect(() => {
@@ -32,7 +33,12 @@ function Home() {
             posts.map((item) => {
               return (
                 <Grid key={item.id} item md={3} sx={{ height: "650px" }}>
-                  <Card item={item} />
+                  <Link
+                    to={"/product/" + item.id}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Card item={item} />
+                  </Link>
                 </Grid>
               );
             })}
