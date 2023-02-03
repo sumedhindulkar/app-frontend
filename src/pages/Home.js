@@ -32,7 +32,7 @@ function Home() {
           {posts &&
             posts.map((item) => {
               return (
-                <Grid key={item.id} item md={3} sx={{ height: "650px" }}>
+                <Grid key={item.id} item md={3}>
                   <Link
                     to={"/product/" + item.id}
                     style={{ textDecoration: "none" }}

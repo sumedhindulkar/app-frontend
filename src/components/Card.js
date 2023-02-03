@@ -20,19 +20,29 @@ export default function ActionAreaCard(item) {
         >
           <img
             src={item.item.image}
-            style={{ width: "200px", maxHeight: "280px", padding: "30px" }}
+            style={{
+              width: "250px",
+              height: "250px",
+              padding: "30px",
+              objectFit: "contain",
+            }}
           />
           <Typography gutterBottom variant="h6" sx={{ textAlign: "center" }}>
-            {item.item.title}
+            {item.item.title.substr(0, 10)}..
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
-            sx={{ textAlign: "center", my: 1 }}
+            sx={{
+              textAlign: "center",
+              my: 1,
+              overflow: "hidden",
+              height: "60px",
+            }}
           >
-            {item.item.description.substr(0, 130)}...
+            {item.item.description.substr(0, 80)}...
           </Typography>
-          <Box sx={{ my: 1 }}>
+          <Box sx={{ my: 1, color: "#F19934" }}>
             {/* <StarBorderIcon /> */}
 
             {[1, 2, 3, 4, 5].map((i) => {
